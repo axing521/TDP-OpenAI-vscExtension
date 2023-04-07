@@ -5,11 +5,11 @@
   "repository": {
     "url": "https://github.com/axing521/Lenovo-OpenAI-vscExtension"
   },
-  "publisher": "lenovo-caijr3",
+  "publisher": "caijr3",
   "displayName": "lenovo-openai-demo",
   "description": "一个在vscode集成chatGPT的扩展插件,由caijr3开发",
   "galleryBanner": {"color": "#00BFFF"},
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.77.0"
   },
