@@ -7,9 +7,7 @@ An extension that uses OpenAI's API in vscode. 2023.4.4 I started to develop.
 
 安装此插件后，可以在文件中用鼠标选取一部分文本，然后ctrl+shift+p输入openAI: chat命令，即可等待chatGPT对你的回复。
 
-<video id="video" controls="" preload="none"> <source id="mp4" src="demo.mp4" type="video/mp4"> </video>
-
-
+![demo-gif](./images/demo.gif)
 
 ## Requirements
 
