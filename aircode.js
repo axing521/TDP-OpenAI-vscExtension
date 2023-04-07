@@ -2,7 +2,7 @@
  * @creater:ACBash
  * @create_time:23-4-4 17:25:7
  * @last_modify:ACBash
- * @modify_time:23-4-4 17:25:12
+ * @modify_time:23-4-8 0:14:28
  * @line_count:34
  **/
 
@@ -12,7 +12,7 @@ const aircode = require('aircode');
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "your_openAI_APIkey",
 });
 const openai = new OpenAIApi(configuration);
 

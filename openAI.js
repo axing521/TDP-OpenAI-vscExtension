@@ -2,7 +2,7 @@
  * @creater:ACBash
  * @create_time:23-4-4 15:27:49
  * @last_modify:ACBash
- * @modify_time:23-4-7 11:17:50
+ * @modify_time:23-4-7 22:37:28
  * @line_count:124
  **/
 
@@ -110,7 +110,7 @@ const request = (options) => {
     }
     return service(options);
 };
-
+//vue框架和react有什么区别？
 const chat = async (data) => {
     const res = await request({
         method: 'get',
