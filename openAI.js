@@ -2,7 +2,7 @@
  * @creater:ACBash
  * @create_time:23-4-4 15:27:49
  * @last_modify:ACBash
- * @modify_time:23-4-7 22:37:28
+ * @modify_time:23-4-8 14:9:7
  * @line_count:124
  **/
 
@@ -10,7 +10,7 @@
 const openai = require('openai');   //引入openAI的SDK
 
 // var apiKey = 'YOUR_API_KEY_HERE';    openAI_APIkey
-const apiKey = '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';
+
 // let chatGPT = null;
 
 const configuration = new openai.Configuration({ apiKey: apiKey });
@@ -82,7 +82,7 @@ callApi("hello!", console.log); */
 /* const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -97,7 +97,7 @@ const start = async function(){
 start(); */
 
 const axios = require('axios');
-const host = "https://ku9snu7265.hk.aircode.run";
+const host = "微服务接口地址";
 const service = axios.create({
     baseURL: host,
     timeout: '60000'
