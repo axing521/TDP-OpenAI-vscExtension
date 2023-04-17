@@ -7,3 +7,6 @@ vsc-extension-quickstart.md
 **/jsconfig.json
 **/*.map
 **/.eslintrc.json
+images/demo.mp4
+v1.0.1
+Lenovo-OpenAI-2.0.0.vsix

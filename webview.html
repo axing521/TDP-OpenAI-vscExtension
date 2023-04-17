@@ -1,0 +1,215 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Q&A Window</title>
+    <style>
+    /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Interactive Q&A Window</h1>
+    <p>Ask a question:</p>
+    <input type="text" id="question" name="question">
+    <button onclick="askQuestion()">Ask</button>
+    <div id="answer"></div>
+
+    <script>
+    function askQuestion() {
+        // Get the question from the input field
+        var question = document.getElementById("question").value;
+
+        // Send the question to the backend
+        vscode.postMessage({
+        command: 'askQuestion',
+        question: question
+        });
+    }
+
+    // Handle messages sent from the extension to the webview
+    window.addEventListener('message', event => {
+        const message = event.data; // The JSON data our extension sent
+
+        switch (message.command) {
+        case 'showAnswer':
+            // Display the answer in the answer div
+            document.getElementById("answer").innerHTML = message.answer;
+            break;
+        }
+    });
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>固定在页面底部的输入框</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #1E1E1E;
+            text-align: center;
+        }
+        .container input[type=text] {
+            background-color: #3C3C3C;
+            color: #fff;
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        .container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat" class='chat'>
+        1111111111111
+    </div>
+    <div class="container">
+        <input id="query" type="text" name="query" placeholder="请输入内容...">
+        <button onclick="askQuestion()">提交</button>
+    </div>
+
+    <script>
+        const { Configuration, OpenAIApi } = require('openai');
+
+        async function request(APIKey, userQuery) {
+            const configuration = new Configuration({
+                apiKey: APIKey,
+            });
+            
+            const openai = new OpenAIApi(configuration);
+
+            const completion = await openai.createChatCompletion({
+                model: "gpt-3.5-turbo",
+                messages: [{role: "user", content: userQuery}],
+            });
+            
+            return {
+                message: completion.data.choices[0].message,
+            };
+        }
+    
+        function askQuestion() {
+            // 获取用户输入
+            let userQuery = document.getElementById("query").value;
+
+            
+
+            //将用户输入的字符串显示在div-chat中
+            document.getElementById("chat").innerHTML = message.answer;
+            
+
+    
+            // Send the question to the backend
+            vscode.postMessage({
+                command: 'askQuestion',
+                question: question
+            });
+        }
+    
+        // Handle messages sent from the extension to the webview
+        window.addEventListener('message', event => {
+            const message = event.data; // The JSON data our extension sent
+            
+            switch (message.command) {
+            case 'showAnswer':
+                // Display the answer in the answer div
+                document.getElementById("answer").innerHTML = message.answer;
+                break;
+            }
+        });
+        </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .loader {
+        width: 70px;
+        height: 35px;
+        overflow: hidden;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .loader:before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 5px solid #0000;
+        border-color: #fff #fff #0000 #0000;
+        border-radius: 50%;
+        box-sizing: border-box;
+        animation: rotate 3s ease-in-out infinite;
+        transform: rotate(-200deg);
+    }
+
+    @keyframes rotate {
+        0% {
+            border-width: 10px;
+        }
+
+        25% {
+            border-width: 3px;
+        }
+
+        50% {
+            transform: rotate(115deg);
+            border-width: 10px;
+        }
+
+        75% {
+            border-width: 3px;
+        }
+
+        100% {
+            border-width: 10px;
+        }
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
