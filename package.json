@@ -1,5 +1,5 @@
 {
-    "name": "Lenovo-OpenAI",
+    "name": "lenovo-openai-demo",
     "icon": "images/icon.png",
     "license": "MIT",
     "repository": {
@@ -14,9 +14,7 @@
       "vscode": "^1.77.0"
     },
     "categories": [
-      "OpenAI",
-      "ChatGPT",
-      "Lenovo"
+      "Other"
     ],
     "activationEvents": ["onView:Lenovo-OpenAI.view"],
     "main": "./Lenovo-OpenAI.js",
