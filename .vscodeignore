@@ -8,5 +8,8 @@ vsc-extension-quickstart.md
 **/*.map
 **/.eslintrc.json
 images/demo.mp4
-v1.0.1
+images/demo.gif
+images/v2.gif
+v1
+v2
 Lenovo-OpenAI-2.0.0.vsix

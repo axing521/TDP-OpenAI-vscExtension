@@ -2,7 +2,7 @@
  * @creater:ACBash
  * @create_time:23-4-10 14:37:43
  * @last_modify:ACBash
- * @modify_time:23-4-17 15:19:11
+ * @modify_time:23-4-18 9:37:33
  * @line_count:77
  **/
 
@@ -48,7 +48,7 @@ function activate(context) {
 
     async function askChatGPT(userInput) {
         if (!userInput) {
-            userInput = await vscode.window.showInputBox({ prompt: "向ChatGPT问一个问题" }) || "";
+            userInput = await vscode.window.showInputBox({ prompt: "向ChatGPT问一个问题" });
         }
 
         let editor = vscode.window.activeTextEditor;
@@ -59,15 +59,15 @@ function activate(context) {
 
             const code = selectedCode
                 ? selectedCode
-                : `This is the ${editor.document.languageId} file and I'm working on: \n\n${entireFileContents}`;
+                : `这是${editor.document.languageId}文件并且其中的内容是\n\n${entireFileContents}`;
 
             chatViewProvider.sendOpenAiApiRequest(userInput, code);
         }
     }
 
-    async function askGPTToExplain() { await askChatGPT('Can you explain what this code does?'); }
-	async function askGPTWhyBroken() { await askChatGPT('Why is this code broken?'); }
-	async function askGPTToRefactor() { await askChatGPT('Can you refactor this code and explain what\'s changed?'); }
+    async function askGPTToExplain() { await askChatGPT('你能解释一下这段代码是做什么的吗?'); }
+	async function askGPTWhyBroken() { await askChatGPT('为什么这段代码会报错?'); }
+	async function askGPTToRefactor() { await askChatGPT('你能重构优化这段代码吗'); }
 
     async function clearHTML() { await chatViewProvider.clearHTML(); }
 }
