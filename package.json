@@ -6,10 +6,10 @@
       "url": "https://github.com/axing521/Lenovo-OpenAI-vscExtension"
     },
     "publisher": "caijr3",
-    "displayName": "Lenovo-OpenAI",
+    "displayName": "TDP-OpenAI",
     "description": "一个在vscode集成chatGPT的扩展插件,由caijr3开发",
     "galleryBanner": {"color": "#00BFFF"},
-    "version": "2.0.1",
+    "version": "2.0.2",
     "engines": {
       "vscode": "^1.77.0"
     },

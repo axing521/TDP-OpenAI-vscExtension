@@ -2,7 +2,7 @@
  * @creater:ACBash
  * @create_time:23-4-10 14:37:43
  * @last_modify:ACBash
- * @modify_time:23-4-18 9:37:33
+ * @modify_time:23-4-19 15:25:24
  * @line_count:77
  **/
 
@@ -17,7 +17,7 @@ function activate(context) {
     //显示已激活扩展
     console.log(`Good! 联想内部使用OpenAI插件成功激活!`);
     vscode.window.showInformationMessage(`Good! 联想内部使用OpenAI插件成功激活!`);
-
+    
     //侧边栏可视化交互式窗口UI
     const chatViewProvider = new ChatGptViewProvider(context);
     
