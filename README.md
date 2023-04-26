@@ -30,6 +30,8 @@ vscode扩展市场发布名称：Lenovo-OpenAI
 
 github源码地址：https://github.com/axing521/Lenovo-OpenAI-vscExtension
 
+![下载量](https://lenovo-openai-demo.oss-cn-beijing.aliyuncs.com/d661d5f56ec1992ef861c574fe50bef.png)
+
 ---
 
 An extension that uses OpenAI's API in vscode. 2023.4.4 I started to develop.
