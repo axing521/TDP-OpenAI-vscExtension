@@ -6,7 +6,7 @@
 
 vscode扩展市场发布名称：TDP-OpenAI
 
-**项目背景**：本人在北京联想公司实习期间，部门主要业务的低代码平台开发需要用到ChatGPT组件，leader让我首先去实现一个在vscode中使用OpenAI的API的扩展插件。
+**项目背景**：本人在北京某想公司实习期间，部门主要业务的低代码平台开发需要用到ChatGPT组件，leader让我首先去实现一个在vscode中使用OpenAI的API的扩展插件。
 
 **项目内容**：开发一个vscode中使用OpenAI的API的扩展插件，能够让用户通过命令使用、右键菜单以及webview视图交互式UI进行ChatGPT的使用。
 
